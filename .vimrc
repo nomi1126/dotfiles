@@ -1,10 +1,13 @@
 set nocompatible
 
 if has('vim_starting')
- set runtimepath+=~/.vim/bundle/neobundle.vim/
+  if &compatible
+    set nocompatible
+  endif "
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -12,7 +15,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Recommended to install
 " After install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
 
-" NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/vimshell'
@@ -49,9 +51,20 @@ NeoBundleLazy 'junegunn/vim-easy-align', {
   \ }}
 NeoBundle 'tomtom/tcomment_vim'
 
-" VimFilerの設定
+call neobundle#end()
+
+filetype plugin indent on
+NeoBundleCheck
+
+" --------------------------------
+"  " vimfiler
+"  " --------------------------------
 " デフォルトでIDE風のFilerを開く
 autocmd VimEnter * VimFiler -split -simple -winwidth=30 -no-quit
+let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_safe_mode_by_default=0
+let g:netrw_liststyle=3
+
 " previmで.mdファイルをブラウザーで開けるようにする
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 
@@ -63,10 +76,6 @@ augroup Processing
    autocmd BufNewFile *.pde NeoBundleSource vim-processing
    autocmd BufRead    *.pde NeoBundleSource vim-processing
 augroup END
-
-let g:vimfiler_as_default_explorer = 1
-let g:vimfiler_safe_mode_by_default=0
-let g:netrw_liststyle=3
 
 " --------------------------------
 "  " neocomplete.vim
@@ -124,9 +133,6 @@ nnoremap <Leader><C-p> :<C-u>Unite yankround<CR>
 vmap <Enter> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
 
-filetype plugin indent on
-NeoBundleCheck
-
 sy on
 
 " set tags=/usr/local/bin/ctags
@@ -137,7 +143,6 @@ set nu
 set guifont=Ricty-Regular:h9
 set backupdir=$HOME/vimbackup
 set clipboard=unnamed
-set nocompatible
 set directory=$HOME/vimbackup
 set hidden
 set number

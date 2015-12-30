@@ -50,6 +50,7 @@ NeoBundleLazy 'junegunn/vim-easy-align', {
   \   'mappings' : ['<Plug>(EasyAlign)'],
   \ }}
 NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'tpope/vim-fugitive'
 
 call neobundle#end()
 

@@ -182,7 +182,7 @@ set smartcase
 set helplang=ja,en
 
 " ステータスラインの表示設定
-set statusline=%F%m%r%h%w\%=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[LOW=%l/%L]
+set statusline=%F%m%r%h%w\%=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[LOW=%l/%L]%{fugitive#statusline()}
 set laststatus=2
 
 set formatoptions+=mM

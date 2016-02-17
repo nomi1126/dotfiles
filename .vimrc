@@ -37,7 +37,8 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'sophacles/vim-processing'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'othree/html5.vim'
+" If use this, PrevimOpen command can not be used.
+" NeoBundle 'othree/html5.vim'
 NeoBundle 'marijnh/tern_for_vim', {
     \ 'build': {
     \   'others' : 'npm install'

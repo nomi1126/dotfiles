@@ -183,8 +183,10 @@ set smartcase
 set helplang=ja,en
 
 " ステータスラインの表示設定
-set statusline=%F%m%r%h%w\%=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[LOW=%l/%L]%{fugitive#statusline()}
-set laststatus=2
+if has('statusline')
+  set statusline=%F%m%r%h%w\%=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[LOW=%l/%L]%{fugitive#statusline()}
+  set laststatus=2
+endif
 
 set formatoptions+=mM
 set virtualedit=block

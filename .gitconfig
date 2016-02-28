@@ -1,0 +1,6 @@
+[user]
+	name = r21nomi
+	email = ryotakosu@gmail.com
+
+[core]
+    editor = /usr/local/bin/vim

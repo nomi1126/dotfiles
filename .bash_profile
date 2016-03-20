@@ -13,9 +13,10 @@ fi
 export PATH=$PATH:/Users/a12690/Library/Android/sdk/platform-tools
 export PATH=$PATH:/Users/a12690/Library/Android/sdk/tools
 
-# export PATH=$PATH://Users/a12690/workspace/tools/adb-peco/bin
-# alias adb='adbp' ## adbコマンドをadbpコマンドで置き換え（https://github.com/tomorrowkey/adb-peco）
-# alias pidcat='pidcatp'
+# Use adb-peco
+export PATH=$PATH://Users/a12690/workspace/tools/adb-peco/bin
+alias adb='adbp'
+alias pidcat='pidcatp'
 
 # Git Aliases
 alias ga='git add'

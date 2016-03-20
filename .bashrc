@@ -8,3 +8,6 @@ export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[33m\]\w\[\033[35m\]$(__git_ps1)
 
 # タブの表示形式を指定
 PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
+
+export NVM_DIR="/Users/a12690/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

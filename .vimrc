@@ -266,6 +266,10 @@ vnoremap < <gv
 nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
 nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
 
+" ノーマルモード時だけ ; と : を入れ替える
+nnoremap ; :
+nnoremap : ;
+
 " Zen-Coding の実行キーを<C-e>に変更
 let g:user_zen_expandabbr_key = '<c-e>'
 " カーソル設定

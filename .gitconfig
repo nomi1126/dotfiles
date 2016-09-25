@@ -4,3 +4,5 @@
 
 [core]
     editor = /usr/local/bin/vim
+[alias]
+	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"

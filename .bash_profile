@@ -2,22 +2,22 @@ if [ -f ~/.bashrc ];
   then . ~/.bashrc
 fi
 
-export NVM_DIR="~/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
-if [[ -s ~/.nvm/nvm.sh ]];
-  then source ~/.nvm/nvm.sh
+if [[ -s $HOME/.nvm/nvm.sh ]];
+  then source $HOME/.nvm/nvm.sh
 fi
 
 # java_home
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # adb
-export PATH=$PATH:~/Library/Android/sdk/platform-tools
-export PATH=$PATH:~/Library/Android/sdk/tools
+export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
+export PATH=$PATH:$HOME/Library/Android/sdk/tools
 
 # Use adb-peco
-export PATH=$PATH:~/workspace/tools/adb-peco/bin
+export PATH=$PATH:$HOME/workspace/tools/adb-peco/bin
 alias adb='adbp'
 alias pidcat='pidcatp'
 

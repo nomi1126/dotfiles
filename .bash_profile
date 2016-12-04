@@ -17,9 +17,7 @@ export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
 export PATH=$PATH:$HOME/Library/Android/sdk/tools
 
 # Use adb-peco
-export PATH=$PATH:$HOME/workspace/tools/adb-peco/bin
-alias adb='adbp'
-alias pidcat='pidcatp'
+alias adb='adb-peco'
 
 # Git Aliases
 alias ga='git add'

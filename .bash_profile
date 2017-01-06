@@ -45,3 +45,13 @@ alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gstd='git stash drop'
 alias gfupr="git fetch upstream '+refs/pull/*/head:refs/pull/*'"
+
+# highlight
+function light() {
+  if [ -z "$2" ]; then
+    src="pbpaste"
+  else
+    src="cat $2"
+  fi
+  $src | highlight -O rtf --syntax $1 --font=Ricty --style=molokai --font-size 24 | pbcopy
+}

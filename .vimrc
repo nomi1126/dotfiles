@@ -52,6 +52,7 @@ NeoBundleLazy 'junegunn/vim-easy-align', {
   \ }}
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'zerowidth/vim-copy-as-rtf'
 
 call neobundle#end()
 

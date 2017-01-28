@@ -138,6 +138,10 @@ nmap <Leader>a <Plug>(EasyAlign)
 
 sy on
 
+" Backup
+set nobackup
+set noswapfile
+
 " set tags=/usr/local/bin/ctags
 set tags=tags;/
 

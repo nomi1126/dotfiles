@@ -53,5 +53,13 @@ function light() {
   else
     src="cat $2"
   fi
+  $src | highlight -O rtf --syntax $1 --font=Ricty --style=fruit --font-size 24 | pbcopy
+}
+function light-dark() {
+  if [ -z "$2" ]; then
+    src="pbpaste"
+  else
+    src="cat $2"
+  fi
   $src | highlight -O rtf --syntax $1 --font=Ricty --style=molokai --font-size 24 | pbcopy
 }

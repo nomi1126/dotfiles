@@ -45,6 +45,7 @@ alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gstd='git stash drop'
 alias gfupr="git fetch upstream '+refs/pull/*/head:refs/pull/*'"
+alias gfopr="git fetch origin '+refs/pull/*/head:refs/pull/*'"
 
 # highlight
 function light() {

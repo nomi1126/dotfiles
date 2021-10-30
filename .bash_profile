@@ -72,3 +72,5 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Postgres
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.6/bin
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"

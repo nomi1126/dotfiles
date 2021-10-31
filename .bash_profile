@@ -2,22 +2,12 @@ if [ -f ~/.bashrc ];
   then . ~/.bashrc
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-
-if [[ -s $HOME/.nvm/nvm.sh ]];
-  then source $HOME/.nvm/nvm.sh
-fi
-
 # java_home
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # adb
 export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
 export PATH=$PATH:$HOME/Library/Android/sdk/tools
-
-# Use adb-peco
-alias adb='adb-peco'
 
 # Git Aliases
 alias ga='git add'

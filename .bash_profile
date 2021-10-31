@@ -65,11 +65,6 @@ function light-dark() {
   $src | highlight -O rtf --syntax $1 --font Ricty --style molokai --font-size 24 | pbcopy
 }
 
-# Golang
-export GOROOT=/usr/local/opt/go/libexec
-export GOPATH=$HOME/workspace/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-
 # Postgres
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.6/bin
 export VOLTA_HOME="$HOME/.volta"
